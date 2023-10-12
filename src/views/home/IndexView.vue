@@ -9,7 +9,7 @@
 
   <!--  -->
   <div style="width: 1200px;margin:0 auto;">
-    <el-row style="background: white">
+    <el-row style="background: white;">
       <el-col :span="3">
         <p style="font-size: 28px; margin: 15px;">烘焙食谱</p>
       </el-col>
@@ -18,10 +18,10 @@
             mode="horizontal"
             active-text-color="orange"
             default-active="1"
-            style="margin-top: 5px;color:#909399;"
+            style="margin-top: 0px;color:#909399;"
 
         >
-          <el-menu-item @hover="f()" index="1">全部</el-menu-item>
+          <el-menu-item index="1">全部</el-menu-item>
           <el-menu-item index="2">面包</el-menu-item>
           <el-menu-item index="3">零食</el-menu-item>
           <el-menu-item index="4">家常菜</el-menu-item>
@@ -55,7 +55,7 @@
             mode="horizontal"
             active-text-color="orange"
             default-active="1"
-            style="margin-top: 5px;color:#909399;"
+            style="margin-top: 0px;color:#909399;"
 
         >
           <el-menu-item index="1">全部</el-menu-item>
@@ -91,7 +91,7 @@
             mode="horizontal"
             active-text-color="orange"
             default-active="1"
-            style="margin-top: 5px;color:#909399;"
+            style="margin-top: 0px;color:#909399;"
 
         >
           <el-menu-item index="1">全部</el-menu-item>

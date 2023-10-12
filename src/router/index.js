@@ -6,7 +6,7 @@ const routes = [
         path: '/',
         name: 'home',
         component: HomeView,
-        redirect:'index',
+        redirect:'/index',
         children: [
             {
                 path: '/reg',
@@ -19,6 +19,33 @@ const routes = [
             {
                 path:'/index',
                 component:()=>import('../views/home/IndexView.vue')
+            },
+            {
+                path:'/list',
+                component:()=> import('../views/home/ListView.vue')
+            },
+            {
+                path:'/detail',
+                component:()=> import('../views/home/DetailView.vue')
+            },
+            {
+                path:'/personal',
+                component:()=>import('../views/home/PersonalView.vue'),
+                redirect:'pindex',
+                children:[
+                    {
+                        path:'pindex',
+                        component: ()=>import("../views/personal/PersonalIndexView.vue")
+                    },
+                    {
+                        path:'management',
+                        component: ()=>import("../views/personal/PersonalManagementView.vue")
+                    },
+                    {
+                        path:'/post',
+                        component: ()=>import("../views/personal/PersonalPostView.vue")
+                    }
+                ]
             }
         ]
     },
